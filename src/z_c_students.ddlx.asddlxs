@@ -1,0 +1,21 @@
+@Metadata.layer: #PARTNER
+annotate view Z_C_STUDENTS
+    with 
+{
+    @UI.facet: [{id: 'Id', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE,label: 'Id',
+  position: 10}]
+ 
+    @UI:{lineItem:[ { position:10,label:'Id' } ] ,identification:[ { position:10,label:'Id' } ] }
+   
+     Id;
+     @UI:{lineItem:[ { position:20,label:'Studentname' } ] ,identification:[ { position:20,label:'Studentname' } ] }
+//       @UI.selectionField: [{position:10  }]
+    Studentname;
+      @UI:{lineItem:[ { position:30,label:'Marks' } ] ,identification:[ { position:30,label:'Marks' } ] }
+//       @UI.selectionField: [{position:20  }]
+    Marks;
+      @UI:{lineItem:[ { position:40,label:'Studentage' } ] ,identification:[ { position:40,label:'Studentage' } ] }
+//       @UI.selectionField: [{position:30  }]
+    Studentage;
+    
+}

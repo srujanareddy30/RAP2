@@ -1,0 +1,20 @@
+managed implementation in class zbp_i_students unique;
+strict ( 2 );
+
+define behavior for Z_I_Students //alias <alias_name>
+persistent table zstudent
+lock master
+authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+  field ( readonly:update ) Id;
+  mapping for ZSTUDENT corresponding{
+  Id=id;
+  Studentname=studentname;
+  Marks=marks;
+  Studentage=studentage;
+
+  }
+}

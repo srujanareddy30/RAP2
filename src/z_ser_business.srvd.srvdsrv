@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for business'
+define service Z_SER_BUSINESS {
+  expose Z_C_BUSINESS;
+}

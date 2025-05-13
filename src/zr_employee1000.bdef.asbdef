@@ -1,0 +1,45 @@
+managed implementation in class ZBP_R_EMPLOYEE1 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_EMPLOYEE1000 alias employee
+persistent table ZEMPLOYEE1
+draft table ZEMPLOYEE1_D
+etag master Changedon
+lock master total etag Changedon
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Employeeid;
+
+  field ( readonly )
+   Createdon,
+   Createdby,
+   Changedon,
+   Changedby;
+
+  field ( readonly : update )
+   Employeeid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZEMPLOYEE1
+  {
+    Employeeid = employeeid;
+    Employeename = employeename;
+    Email = email;
+    Createdon = createdon;
+    Createdby = createdby;
+    Changedon = changedon;
+    Changedby = changedby;
+  }
+}

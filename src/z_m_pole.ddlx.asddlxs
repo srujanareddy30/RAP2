@@ -1,0 +1,53 @@
+@Metadata.layer: #PARTNER
+annotate view Z_C_POLE with
+{
+  @UI.facet: [{id: 'refno', purpose:#STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'refno',
+  position: 10},{ id: 'Items',purpose: #STANDARD,
+                               type: #LINEITEM_REFERENCE,
+                               label: 'Pole Child',
+                               position: 20,
+                               targetElement: '_item'
+     }]
+  @UI:{lineItem:[ { position:10,label:'Guid' } ] ,identification:[ { position:10,label:'Guid' } ] }
+  @UI.hidden: true
+  Guid;
+
+  @UI:{lineItem:[ { position:20,label:'refno' } ] ,identification:[ { position:20,label:'refno' } ] }
+  Refno;
+  @UI:{lineItem:[ { position:30,label:'polno' } ] ,identification:[ { position:30,label:'polno' } ] }
+  Polno;
+  @UI:{lineItem:[ { position:40,label:'poles' } ] ,identification:[ { position:40,label:'poles' } ] }
+  Poles;
+  @UI:{lineItem:[ { position:50,label:'Country' } ] ,identification:[ { position:50,label:'Country' } ] }
+  Country;
+  @UI:{lineItem:[ { position:60,label:'Region' } ] ,identification:[ { position:60,label:'Region' } ] }
+  Region;
+  @UI:{lineItem:[ { position:70,label:'Language' } ] ,identification:[ { position:70,label:'Language' } ] }
+  @UI.hidden: true
+  Language;
+  
+
+  @UI:{lineItem:[ { position:80,label:'Areas' } ] ,identification:[ { position:80,label:'Area' } ] }
+  Area;
+  @UI:{lineItem:[ { position:90,label:'Name' } ] ,identification:[ { position:90,label:'Name' } ] }
+  Name;
+  @UI:{lineItem:[ { position:100,label:'Surname' } ] ,identification:[ { position:100,label:'Surname' } ] }
+  Surname;
+   @UI:{lineItem:[ { position:110,label:'status' } ] ,identification:[ { position:110,label:'status' } ] }
+  Status;
+  
+
+  @UI:{lineItem:[ { position:90,label:'Createdon' } ] ,identification:[ { position:90,label:'Createdon' } ] }
+  @UI.hidden: true
+  Createdon;
+  @UI:{lineItem:[ { position:100,label:'Createdby' } ] ,identification:[ { position:100,label:'Createdby' } ] }
+  @UI.hidden: true
+  Createdby;
+  @UI:{lineItem:[ { position:110,label:'Changedon' } ] ,identification:[ { position:110,label:'Changedon' } ] }
+  @UI.hidden: true
+  Changedon;
+  @UI:{lineItem:[ { position:120,label:'Changedby' } ] ,identification:[ { position:120,label:'Changedby' } ] }
+  @UI.hidden: true
+  Changedby;
+
+}

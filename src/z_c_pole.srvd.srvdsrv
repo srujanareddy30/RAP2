@@ -1,0 +1,5 @@
+@EndUserText.label: 'service def for pole'
+define service Z_C_POLE {
+  expose Z_C_POLE      as poles;
+  expose Z_C_POLECHILD as polechild;
+}

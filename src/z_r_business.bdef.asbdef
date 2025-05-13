@@ -1,0 +1,15 @@
+unmanaged implementation in class zbp_r_business unique;
+strict ( 2 );
+
+define behavior for Z_R_BUSINESS //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Guid;
+  field ( readonly : update ) Businessid;
+}

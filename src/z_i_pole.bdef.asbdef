@@ -1,0 +1,66 @@
+managed implementation in class zbp_i_pole unique;
+strict ( 2 );
+
+define behavior for Z_I_POLE alias _parent
+persistent table zpole
+lock master
+authorization master ( instance )
+etag master Changedon
+with additional save with full data
+//with unmanaged save
+{
+  create;
+  update;
+  delete;
+  association _item { create; }
+  field ( readonly : update ) Refno;
+  field ( numbering : managed, readonly ) Guid;
+  field(readonly) Createdon, Changedon, Createdby ,Changedby;
+  mapping for zpole
+    {
+      Guid      = guid;
+      Refno     = refno;
+      Polno     = polno;
+      Poles     = poles;
+      Country   = country;
+      Region    = region;
+      Language  = language;
+      Area      = area;
+      Name      = name;
+      Surname   = surname;
+      Createdon = createdon;
+      Createdby = createdby;
+      Changedon = changedon;
+      Changedby = changedby;
+    }
+}
+
+
+define behavior for Z_I_POLECHILD alias _item
+persistent table zpolechild
+lock dependent by _parent
+authorization master ( instance )
+etag master Changedon
+{
+  update;
+  delete;
+  field ( readonly : update ) Refno, RefId;
+  field ( readonly ) Guid;
+  field(readonly) Createdon, Changedon, Createdby, Changedby;
+  association _parent;
+
+  mapping for zpolechild
+    {
+      Guid      = guid;
+      Refno     = refno;
+      RefId     = refid;
+      Polhei    = polhei;
+      Heiunit   = heiunit;
+      Polewid   = polewid;
+      Widunit   = widunit;
+      Createdon = createdon;
+      Createdby = createdby;
+      Changedon = changedon;
+      Changedby = changedby;
+    }
+}

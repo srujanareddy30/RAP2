@@ -1,0 +1,30 @@
+@Metadata.layer: #PARTNER
+annotate view Z_C_POLECHILD with
+{
+  @UI:{lineItem:[ { position:10,label:'Guid' } ] ,identification:[ { position:10,label:'Guid' } ] }
+  Guid;
+  @UI.facet: [{id: 'refno', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Ref No',
+  position: 10}]
+
+  @UI:{lineItem:[ { position:20,label:'Ref No' } ] ,identification:[ { position:20,label:'Ref No' } ] }
+  Refno;
+  @UI:{lineItem:[ { position:30,label:'Ref Id' } ] ,identification:[ { position:30,label:'Ref Id' } ] }
+  RefId;
+  @UI:{lineItem:[ { position:40,label:'Pole Height' } ] ,identification:[ { position:40,label:'Pole Height' } ] }
+  Polhei;
+  @UI:{lineItem:[ { position:50,label:'Height unit' } ] ,identification:[ { position:50,label:'Height unit' } ] }
+  Heiunit;
+  @UI:{lineItem:[ { position:60,label:'Pole Width' } ] ,identification:[ { position:60,label:'Pole Width' } ] }
+  Polewid;
+  @UI:{lineItem:[ { position:70,label:'Width unit' } ] ,identification:[ { position:70,label:'Width unit' } ] }
+  Widunit;
+  @UI:{lineItem:[ { position:80,label:'Createdon' } ] ,identification:[ { position:80,label:'Createdon' } ] }
+  Createdon;
+  @UI:{lineItem:[ { position:90,label:'Createdby' } ] ,identification:[ { position:90,label:'Createdby' } ] }
+  Createdby;
+  @UI:{lineItem:[ { position:100,label:'Changedon' } ] ,identification:[ { position:100,label:'Changedon' } ] }
+  Changedon;
+  @UI:{lineItem:[ { position:110,label:'Changedby' } ] ,identification:[ { position:110,label:'Changedby' } ] }
+  Changedby;
+
+}
